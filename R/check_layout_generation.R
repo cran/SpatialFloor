@@ -4,7 +4,7 @@
 #' @param n.row The row of the grid layout
 #' @param n.col The column of the grid layout
 #' @param by.density The density of the check in the layout. The parameter can be a vector
-#' @param gen.module The pattern module of check layout, 'diagonal', 'random', 'equal_space'. The parameter can be a vector
+#' @param gen.module The pattern module of check layout, 'diagonal', 'diagSet', 'random', 'equal_space'. The diagSet provides more homogeneized design than the diagonal at density from 0.01 to 0.35. The parameter can be a vector
 #' @export
 #' @examples
 #' nr = nc = 5; den = c(0.1, 0.2); gen.module=c('diagonal', 'random')

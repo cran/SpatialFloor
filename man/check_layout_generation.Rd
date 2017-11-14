@@ -13,7 +13,7 @@ check_layout_generation(n.row, n.col, by.density, gen.module)
 
 \item{by.density}{The density of the check in the layout. The parameter can be a vector}
 
-\item{gen.module}{The pattern module of check layout, 'diagonal', 'random', 'equal_space'. The parameter can be a vector}
+\item{gen.module}{The pattern module of check layout, 'diagonal', 'diagSet', 'random', 'equal_space'. The diagSet provides more homogeneized design than the diagonal at density from 0.01 to 0.35. The parameter can be a vector}
 }
 \description{
 The function takes grid input, and generates the corresponding check layout

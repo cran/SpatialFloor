@@ -5,7 +5,7 @@
 \title{A simulation fucntion for isotrophic spatial data}
 \usage{
 iso_simulation_by_heriability(n.row, n.col, lon.lat = FALSE, mile = FALSE,
-  density.choice, density.layout = c("diagonal", "random", "equal_space"), h2,
+  density.choice, density.layout = c("diagSet", "random", "equal_space"), h2,
   sigma_env, sigma_variety = (sigma_env * h2)/(1 - h2), mu_variety,
   mu_check = mu_variety + 1.68 * sqrt(sigma_variety), cov_fun = "exp",
   ranges = sqrt(2), simulation = 3, fixed.pattern = TRUE, nugget = 0,
@@ -22,7 +22,7 @@ iso_simulation_by_heriability(n.row, n.col, lon.lat = FALSE, mile = FALSE,
 
 \item{density.choice}{(Mandatory) The density of the checks, a vector (range from 0 to 1)}
 
-\item{density.layout}{(Optional) The layout pattern of density, default are: 'diagonal', 'random', 'equal_space'}
+\item{density.layout}{(Optional) The layout pattern of density, default are: 'diagonal', 'diagSet', 'random', 'equal_space'. The diagSet is recommended over the diagonal at density from 0.01 to 0.35.}
 
 \item{h2}{(Mandatory) The heritability of the simulated data, h2 = sigma_variety / (sigma_variety + sigma_env)}
 

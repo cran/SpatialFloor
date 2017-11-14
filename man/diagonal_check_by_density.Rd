@@ -10,7 +10,7 @@ diagonal_check_by_density(n.row, n.col, by.density, spread.scale = 50 *
 \arguments{
 \item{n.row}{The row of the retangular grid}
 
-\item{n.col}{The column of teh retangular grid}
+\item{n.col}{The column of the retangular grid}
 
 \item{by.density}{The density of the check}
 

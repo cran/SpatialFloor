@@ -6,7 +6,7 @@
 #' @param lon.lat (Optional) The distance calculation is based on earth distance (if TRUE), default is FALSE
 #' @param mile (Optional) The distance calculation is based on milage (if TRUE), default is FALSE
 #' @param density.choice (Mandatory) The density of the checks, a vector (range from 0 to 1)
-#' @param density.layout (Optional) The layout pattern of density, default are: 'diagonal', 'random', 'equal_space'
+#' @param density.layout (Optional) The layout pattern of density, default are: 'diagonal', 'diagSet', 'random', 'equal_space'. The diagSet is recommended over the diagonal at density from 0.01 to 0.35. 
 #' @param h2 (Mandatory) The heritability of the simulated data, h2 = sigma_variety / (sigma_variety + sigma_env)
 #' @param sigma_env (Mandatory) The variance of environment, (equilievent of sill)
 #' @param sigma_variety (Optional) The variance of entry, default sigma_variety = (sigma_env * h2) / (1 - h2)
@@ -26,7 +26,7 @@
 #' temp.2 = iso_simulation_by_heriability(10, 10, density.choice=c(0.05,0.1)
 #'				, h2=0.5, sigma_env=100, mu_variety=300, fixed.pattern=FALSE)
 
-iso_simulation_by_heriability = function(n.row, n.col, lon.lat=FALSE, mile=FALSE, density.choice, density.layout=c('diagonal', 'random', 'equal_space'), h2, sigma_env, sigma_variety=(sigma_env*h2)/(1-h2), mu_variety, mu_check=mu_variety+1.68*sqrt(sigma_variety), cov_fun='exp', ranges=sqrt(2), simulation=3, fixed.pattern=TRUE, nugget=0, mu_floor=0) {
+iso_simulation_by_heriability = function(n.row, n.col, lon.lat=FALSE, mile=FALSE, density.choice, density.layout=c('diagSet', 'random', 'equal_space'), h2, sigma_env, sigma_variety=(sigma_env*h2)/(1-h2), mu_variety, mu_check=mu_variety+1.68*sqrt(sigma_variety), cov_fun='exp', ranges=sqrt(2), simulation=3, fixed.pattern=TRUE, nugget=0, mu_floor=0) {
   if(fixed.pattern==TRUE){
 		tmp.1 = check_layout_generation(n.row, n.col, density.choice, density.layout)
 		D.tmp.fix = spatial_dist(tmp.1[[1]][[1]][,1:2], lon.lat=lon.lat, mile=mile)

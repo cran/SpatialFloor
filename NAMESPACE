@@ -2,6 +2,7 @@
 
 export(check_layout_generation)
 export(density_check)
+export(diagSet_check_by_density)
 export(diagonal_check_by_density)
 export(equal_check_by_plot)
 export(equal_space_check_by_density)

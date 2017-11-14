@@ -2,7 +2,7 @@
 #'
 #' This funciton generates a layout grid with checks on diagonal
 #' @param n.row The row of the retangular grid
-#' @param n.col The column of teh retangular grid
+#' @param n.col The column of the retangular grid
 #' @param by.density The density of the check
 #' @param spread.scale The spreading of the check across diagonal, related to the scale parameter in Cauchy distribution, default=50*max(n.row, n.col)
 #' @export
