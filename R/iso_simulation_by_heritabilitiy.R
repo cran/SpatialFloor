@@ -30,16 +30,19 @@ iso_simulation_by_heriability = function(n.row, n.col, lon.lat=FALSE, mile=FALSE
   if(fixed.pattern==TRUE){
 		tmp.1 = check_layout_generation(n.row, n.col, density.choice, density.layout)
 		D.tmp.fix = spatial_dist(tmp.1[[1]][[1]][,1:2], lon.lat=lon.lat, mile=mile)
+		env.error = iso_spatial_floor(D.tmp.fix, cov.var=cov_fun, nugget=nugget, sill=sigma_env, ranges=ranges, mu=mu_floor)
+		true.all = rnorm(n.row*n.col, mu_variety, sqrt(sigma_variety))
+		
 		dta.out.fix = lapply(density.layout, function(x){
 					tmp.den.fix = lapply(as.character(density.choice), function(y){
 						tmp.sim.fix = lapply(1:simulation, function(z){
 									tmp.2 = tmp.1[[x]][[y]]
-									tmp.2$env.error = iso_spatial_floor(D.tmp.fix, cov.var=cov_fun, nugget=nugget, sill=sigma_env, ranges=ranges, mu=mu_floor)
+									tmp.2$env.error = env.error
 									tmp.2$variety = tmp.2$true.val = tmp.2$check
 									idc = sum(tmp.2$check==0)
 							
 									tmp.2[tmp.2$check==1,]$true.val = mu_check
-									tmp.2[tmp.2$check==0,]$true.val = rnorm(idc, mu_variety, sqrt(sigma_variety))
+									tmp.2[tmp.2$check==0,]$true.val = sample(true.all, idc)
 							
 									tmp.2[tmp.2$check==1,]$variety='check'
 									tmp.2[tmp.2$check==0,]$variety=paste0('variety.', seq_len(idc))

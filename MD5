@@ -1,4 +1,4 @@
-890cf52b6b6c13b143e8af3791fc2e81 *DESCRIPTION
+63ceb3692b363a28bb14a90ab32ee513 *DESCRIPTION
 f3f1e82eeb9d04273926274c4c01f381 *NAMESPACE
 4f74c0f2cfad59643cda6b1a423bbba4 *R/check_layout_generation.R
 fdd77fe775a5873451c8acabba18ef8e *R/density_check.R
@@ -8,13 +8,13 @@ a7f10b9360c2a9f7875679293900f5e4 *R/diagSet_check_by_density.R
 abf75e8707cbd0e6101aa3e69828577b *R/equal_check_by_plot.R
 078dd4e9749e3ccde79e3fe9e908b93e *R/equal_space_check_by_density.R
 d3e95b920e51de34ada29174d4c349b5 *R/internal.functions.diagonal.R
-1d47271c379566c6da73b76a71a4e90d *R/iso_simulation_by_heritabilitiy.R
+fa987a5791284710168db54d55115552 *R/iso_simulation_by_heritabilitiy.R
 f6ff01be6cf5cacb490d1d59eef2eb0f *R/iso_spatial_cov.R
 c18988c8ca4ffeed85ac5cb278c89939 *R/iso_spatial_exp.R
 05d15b6085c031d2f08af25cff9b59cb *R/iso_spatial_floor.R
 982201f3f5da60736b0a830fd7b01a02 *R/iso_spatial_gau.R
 45fa2b066f75a48208ff78e0d10b40bd *R/random_check_by_density.R
-8efe55a34846382d5424193a9f5421af *R/spatial_dist.R
+77d42617e12ef4bd7d344e1b75478313 *R/spatial_dist.R
 9fe96ece54fb80bf3f25f5eb4775f557 *R/sysdata.rda
 4a3e8aacb2ee64069c2f7239ecaaaae5 *man/check_layout_generation.Rd
 3849bc7c36564d747ae31c1af8308b36 *man/density_check.Rd
