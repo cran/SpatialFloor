@@ -15,6 +15,6 @@ spatial_dist = function(M, lon.lat=F, mile=F){
   if(lon.lat){
     fields::rdist.earth(M, miles=mile)
   } else {
-    base::as.matrix(stats::dist(M, method='manhattan'))
+    base::as.matrix(stats::dist(M, method='euclidean'))
   }
 }

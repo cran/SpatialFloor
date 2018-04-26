@@ -4,7 +4,8 @@
 \alias{check_layout_generation}
 \title{This is a wrapper function of check layout generation}
 \usage{
-check_layout_generation(n.row, n.col, by.density, gen.module)
+check_layout_generation(n.row, n.col, by.density, gen.module,
+  p_rep_check = 0.05)
 }
 \arguments{
 \item{n.row}{The row of the grid layout}
@@ -13,12 +14,14 @@ check_layout_generation(n.row, n.col, by.density, gen.module)
 
 \item{by.density}{The density of the check in the layout. The parameter can be a vector}
 
-\item{gen.module}{The pattern module of check layout, 'diagonal', 'diagSet', 'random', 'equal_space'. The diagSet provides more homogeneized design than the diagonal at density from 0.01 to 0.35. The parameter can be a vector}
+\item{gen.module}{The pattern module of check layout, 'diagonal', 'diagSet', 'random', 'equal_space', 'p_rep'. The diagSet provides more homogeneized design than the diagonal at density from 0.01 to 0.35. The parameter can be a vector}
+
+\item{p_rep_check}{The check density in the p_rep design, default 0.05}
 }
 \description{
 The function takes grid input, and generates the corresponding check layout
 }
 \examples{
-nr = nc = 5; den = c(0.1, 0.2); gen.module=c('diagonal', 'random')
+nr = nc = 5; den = c(0.1, 0.2); gen.module=c('diagSet', 'random')
 check_layout_generation(nr, nc, den, gen.module)
 }
